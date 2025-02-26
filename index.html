@@ -6,24 +6,24 @@
     <title>FocusWork</title>
     <link
       rel="shortcut icon"
-      href="../public/icons/icon.ico"
+      href="./public/icons/icon.ico"
       type="image/x-icon"
     />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
     />
-    <link rel="stylesheet" href="css/styles.css" />
-    <link rel="stylesheet" href="../themes/default.css" />
-    <link rel="stylesheet" href="../themes/dark.css" />
-    <link rel="stylesheet" href="../themes/neon.css" />
-    <link rel="stylesheet" href="./css/notification.css" />
+
+    <link rel="stylesheet" href="./src/css/styles.css" />
+    <link rel="stylesheet" href="./themes/default.css" />
+    <link rel="stylesheet" href="./themes/dark.css" />
+    <link rel="stylesheet" href="./themes/neon.css" />
   </head>
 
   <body class="default">
     <!-- Container chứa thông báo và âm thanh thông báo -->
     <div class="notification-container" id="notificationContainer">
-      <audio id="alarm-sound" src="../public/audio/noti.mp3" hidden></audio>
+      <audio id="alarm-sound" src="./public/audio/noti.mp3" hidden></audio>
     </div>
 
     <header>
@@ -122,11 +122,11 @@
 
     <script src="https://web.nvnstatic.net/js/events/newyear.js"></script>
 
-    <script src="./js/managers/audioManager.js"></script>
-    <script src="./js/notification.js"></script>
-    <script src="./js/countdownTimer.js"></script>
-    <script src="./js/theme.js"></script>
-    <script src="./js/clock.js"></script>
-    <script src="./js/sidebar.js"></script>
+    <script src="./src/js/notification.js"></script>
+    <script src="./src/js/managers/audioManager.js"></script>
+    <script src="./src/js/countdownTimer.js"></script>
+    <script src="./src/js/theme.js"></script>
+    <script src="./src/js/clock.js"></script>
+    <script src="./src/js/sidebar.js"></script>
   </body>
 </html>
