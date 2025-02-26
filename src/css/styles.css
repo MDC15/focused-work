@@ -1,0 +1,162 @@
+/* Import Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600&display=swap');
+
+/* Componemts */
+@import url('./themeStylse.css');
+@import url('./notification.css');
+@import url('./clockStyles.css');
+@import url('./countdownTime.css');
+@import url('./Sidebar.css');
+
+
+/* Reset Styles */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	transition: all 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+/* Header Styles */
+header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0.8rem 2rem;
+	backdrop-filter: blur(4px);
+	z-index: 1000;
+	transition: all 0.3s ease;
+}
+
+header #title {
+	box-shadow: inset;
+	font-weight: bold;
+}
+
+/* Main Content Styles */
+main {
+	flex: 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 80px 20px;
+}
+
+.social-links {
+	display: flex;
+	position: fixed;
+	bottom: 20px;
+	left: 20px;
+}
+
+/* Footer Styles */
+footer {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	text-align: center;
+	padding: 1rem;
+	background: transparent;
+}
+
+footer a {
+	margin: 0 15px;
+	display: inline-block;
+	font-size: 1.25rem;
+	color: inherit;
+	transition: transform 0.2s ease;
+}
+
+footer a:hover {
+	transform: scale(1.1);
+}
+
+/* Responsive Design */
+
+/* Mobile Devices (width < 600px) */
+@media (max-width: 600px) {
+	body {
+		flex-direction: column;
+		padding: 10px;
+	}
+	
+	header {
+		padding: 0.5rem 1rem;
+	}
+
+	main {
+		padding: 60px 10px;
+		flex-direction: column;
+	}
+
+	.social-links {
+		left: 50%;
+		transform: translateX(-50%);
+		bottom: 10px;
+	}
+
+	footer {
+		padding: 0.8rem;
+	}
+}
+
+/* Tablets (width 600px - 1024px) */
+@media (min-width: 600px) and (max-width: 1024px) {
+	body {
+		padding: 20px;
+	}
+
+	header {
+		padding: 1rem 1.5rem;
+	}
+
+	main {
+		padding: 70px 15px;
+	}
+
+	.social-links {
+		bottom: 15px;
+	}
+}
+
+/* Large Screens (width > 1024px) */
+@media (min-width: 1025px) {
+	main {
+		max-width: 1200px;
+	}
+
+	header {
+		padding: 1rem 2rem;
+	}
+
+	footer {
+		padding: 1rem;
+	}
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+	body {
+		background-color: #121212;
+		color: #ffffff;
+	}
+
+	header {
+		background: rgba(0, 0, 0, 0.7);
+	}
+	a {
+		color: #bb86fc;
+	}
+}

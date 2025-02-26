@@ -1,0 +1,153 @@
+.clock-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.8em;
+    font-weight: bold;
+    margin-bottom: 25px;
+    color: #222;
+    border-radius: 4px;
+}
+
+/* Tiêu đề của Timer */
+.timer-section h2 {
+    font-size: 1.8em;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 5px 5px;
+    color: rgb(103, 110, 233);
+    text-shadow: #15e048 2px 2px;
+    background-color: #fbf4f4;
+    opacity: 0.6;
+}
+
+/* Layout cho các ô nhập thời gian */
+.timer-inputs {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.timer-inputs input {
+    width: 70px;
+    padding: 12px;
+    font-size: 1.3em;
+    text-align: center;
+    border: 2px solid #aaa;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.timer-inputs input:focus {
+    border-color: #ff758c;
+    outline: none;
+}
+
+/* Hiển thị thời gian đếm ngược */
+.countdown-display {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.8em;
+    font-weight: bold;
+    color: #111;
+    padding: 12px;
+    background: #f7f7f7;
+    border-radius: 12px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Layout cho các nút */
+.countdown-buttons {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 20px 0;
+}
+
+.countdown-buttons button {
+    padding: 14px 20px;
+    font-size: 1.1em;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    text-transform: uppercase;
+}
+
+#start-countdown {
+    background: #14cb4b;
+    color: rgb(255, 255, 255);
+}
+
+#start-countdown:hover {
+    background: #15e048;
+    color: #000;
+}
+
+#reset-countdown {
+    background: #f67c57;
+    color: rgb(255, 255, 255);
+}
+
+#reset-countdown:hover {
+    background: #ff9472;
+    color: hsl(0, 0%, 8%);
+}
+
+
+/* Responsive Design for Mobile */
+@media (max-width: 600px) {
+
+    /* Thu nhỏ clock-container trên điện thoại */
+    .clock-container {
+        font-size: 2em;
+        /* Giảm kích thước chữ số */
+        margin-bottom: 15px;
+        text-align: center;
+    }
+
+    /* Tiêu đề Timer nhỏ hơn để phù hợp với màn hình nhỏ */
+    .timer-section h2 {
+        font-size: 1.5em;
+        padding: 4px;
+    }
+
+    /* Căn chỉnh layout các ô nhập thời gian */
+    .timer-inputs {
+        flex-direction: column;
+        /* Chuyển từ hàng ngang sang cột */
+        align-items: center;
+        gap: 10px;
+    }
+
+    .timer-inputs input {
+        width: 80%;
+        padding: 10px;
+        font-size: 1.2em;
+    }
+
+    /* Định dạng hiển thị thời gian đếm ngược */
+    .countdown-display {
+        font-size: 2.2em;
+        /* Giảm nhẹ kích thước */
+        padding: 10px;
+        margin-top: 10px;
+    }
+
+    /* Căn chỉnh lại các nút điều khiển */
+    .countdown-buttons {
+        flex-direction: column;
+        /* Sắp xếp theo cột trên mobile */
+        gap: 10px;
+        align-items: center;
+    }
+
+    .countdown-buttons button {
+        width: 80%;
+        padding: 12px;
+        font-size: 1em;
+    }
+}

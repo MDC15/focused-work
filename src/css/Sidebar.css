@@ -1,0 +1,133 @@
+/* CSS Enhancements */
+.sidebar-toggle {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    z-index: 1000;
+    width: 50px;
+    height: 50px;
+    padding: 12px;
+    border: none;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.sidebar-toggle:hover {
+    background: linear-gradient(135deg, #5a75f0, #9259d3);
+    transform: scale(1.1);
+}
+
+.sidebar {
+    position: fixed;
+    top: 100px;
+    right: 0;
+    width: 350px;
+    height: 85vh;
+    border-radius: 20px 0 0 20px;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+    transform: translateX(100%);
+    transition: all 0.4s ease-in-out;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.sidebar.active {
+    transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
+}
+
+.sidebar-content {
+    padding: 25px;
+    height: 100%;
+    overflow-y: auto;
+}
+
+.slidebar-title {
+    font-weight: bold;
+    font-size: 1.8em;
+    color: #080808;
+}
+
+.customize-section {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    background: rgba(255, 255, 255, 0.85);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.customize-section label {
+    color: #444;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.customize-section input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 6px;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.customize-section input[type="color"] {
+    height: 40px;
+}
+
+.customize-section input[type="range"] {
+    accent-color: #5a75f0;
+}
+
+.customize-section input[type="file"] {
+    background-color: rgba(245, 245, 245, 0.9);
+    padding: 6px;
+    font-size: 1.4em;
+    border-radius: 14px;
+}
+
+
+/* Hiển thị sidebar lên trên tất cả nội dung trên mobile */
+@media (max-width: 600px) {
+    .sidebar {
+        margin-top: 400px;
+        width: 100vw;
+        /* Chiếm toàn bộ chiều rộng màn hình */
+        height: 100vh;
+        /* Chiếm toàn bộ chiều cao */
+        top: 0;
+        /* Đặt về phía trên cùng */
+        right: 0;
+        border-radius: 0;
+        /* Loại bỏ bo góc để full màn hình */
+        z-index: 9999;
+        /* Đặt lên trên tất cả */
+        transform: translateX(100%);
+    }
+
+    .sidebar.active {
+        transform: translateX(0);
+    }
+
+    .sidebar-content {
+        padding: 20px;
+        height: 100%;
+    }
+
+    .sidebar-toggle {
+        bottom: 20px;
+        /* Điều chỉnh vị trí nút mở */
+        right: 20px;
+        width: 45px;
+        height: 45px;
+    }
+}

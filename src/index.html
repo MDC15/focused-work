@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FocusWork</title>
+    <link
+      rel="shortcut icon"
+      href="../public/icons/icon.ico"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="../themes/default.css" />
+    <link rel="stylesheet" href="../themes/dark.css" />
+    <link rel="stylesheet" href="../themes/neon.css" />
+    <link rel="stylesheet" href="./css/notification.css" />
+  </head>
+
+  <body class="default">
+    <!-- Container chứa thông báo và âm thanh thông báo -->
+    <div class="notification-container" id="notificationContainer">
+      <audio id="alarm-sound" src="../public/audio/noti.mp3" hidden></audio>
+    </div>
+
+    <header>
+      <h1 id="title">FocusWork</h1>
+      <div class="theme-selector">
+        <label for="themeSelector" style="color: white"></label>
+        <select id="themeSelector" name="themeSelector">
+          <option value="default">Default Theme</option>
+          <option value="dark">Dark Theme🌙</option>
+          <option value="neon">Neon Theme 🪄</option>
+        </select>
+      </div>
+    </header>
+
+    <main>
+      <div class="clock-container">
+        <div id="clock">
+          <span id="hours">00</span>:<span id="minutes">00</span>:<span
+            id="seconds"
+            >00</span
+          >
+        </div>
+      </div>
+
+      <section class="timer-section">
+        <h2>Countdown⏳</h2>
+        <div class="timer-inputs">
+          <input
+            type="number"
+            id="hours-input"
+            placeholder="HH"
+            min="0"
+            max="23"
+          />
+          <input
+            type="number"
+            id="minutes-input"
+            placeholder="MM"
+            min="0"
+            max="59"
+          />
+          <input
+            type="number"
+            id="seconds-input"
+            placeholder="SS"
+            min="0"
+            max="59"
+          />
+        </div>
+        <div class="countdown-display">
+          <span id="countdown-timer">00:00:00</span>
+        </div>
+        <div class="countdown-buttons">
+          <button id="start-countdown">Start</button>
+          <button id="reset-countdown">Reset</button>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="social-links">
+        <a href="https://discord.com" target="_blank">
+          <i class="fab fa-discord"></i>
+        </a>
+        <a href="https://github.com" target="_blank">
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
+
+      <button id="sidebarToggle" class="sidebar-toggle">
+        <i class="fas fa-bars"></i>
+      </button>
+      <div id="sidebar" class="sidebar">
+        <div class="sidebar-content">
+          <h3 class="slidebar-title">Customize Theme</h3>
+          <div class="customize-section">
+            <label for="bgOpacity">Light ✨</label>
+            <input
+              type="range"
+              id="bgOpacity"
+              min="0"
+              max="1"
+              step="0.1"
+              value="0.8"
+            />
+            <hr />
+            <label for="bgColor">Background Color 🎨</label>
+            <input type="color" id="bgColor" />
+            <hr />
+            <label for="bgImage">Background Image 🖼️</label>
+            <input type="file" id="bgImage" accept="image/*" />
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://web.nvnstatic.net/js/events/newyear.js"></script>
+
+    <script src="./js/managers/audioManager.js"></script>
+    <script src="./js/notification.js"></script>
+    <script src="./js/countdownTimer.js"></script>
+    <script src="./js/theme.js"></script>
+    <script src="./js/clock.js"></script>
+    <script src="./js/sidebar.js"></script>
+  </body>
+</html>

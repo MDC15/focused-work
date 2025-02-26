@@ -1,0 +1,67 @@
+/* Clock Styles */
+#clock {
+    position: fixed;
+    top: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 8rem;
+    font-weight: 300;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+#hours,
+#minutes {
+    min-width: 2ch;
+    text-align: center;
+}
+
+.digit {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.digit.out {
+    transform: translateY(-100%);
+    opacity: 0;
+}
+
+.digit.in {
+    transform: translateY(100%);
+    opacity: 0;
+}
+
+.digit.current {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* Thu nhỏ đồng hồ trên điện thoại */
+@media (max-width: 600px) {
+    #clock {
+        font-size: 5rem;
+        top: 120px;
+        z-index: 900;
+    }
+
+    #hours,
+    #minutes {
+        min-width: 1.5ch;
+    }
+
+    .digit {
+        font-size: 2.5rem;
+    }
+
+    .digit.out,
+    .digit.in,
+    .digit.current {
+        transform: scale(0.8);
+    }
+}
