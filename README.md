@@ -1,10 +1,10 @@
 <div align="center">
 
-#  [Focused-Work-App](https://github.com/MDC15/focused-work/)
+# [Focused-Work-App](https://github.com/MDC15/focused-work/)
 
-![Clockwork](https://github.com/MDC15/focused-work/docs/Screenshot.png)
+![Focused-Work-App](https://github.com/MDC15/focused-work/blob/main/docs/Screenshot.png)
 
-Welcome to **Focused Work**, a web-based clock application designed for developers to create and share their own themes. Explore the different themes, or create your own to contribute to the Clockwork community.
+Welcome to **Focused Work**, a web-based clock application designed for developers to create and share their own themes. Explore the different themes, or create your own to contribute to the Focused-Work community.
 The primary goal of this project is to allow developers to create and commit their own themes to enhance the visual appeal and functionality of the clock.
 
 </div>
@@ -19,7 +19,6 @@ The primary goal of this project is to allow developers to create and commit the
 <div align="center">
 
 </div>
-
 
 ## License
 

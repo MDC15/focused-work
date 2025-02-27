@@ -4,27 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Test tinhs nang</title>
+    <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
-    <script>
-      var request = indexedDB.open("myDatabase", 1);
-      request.onupgradeneeded = function (event) {
-        var db = event.target.result;
-        var objectStore = db.createObjectStore("users", { keyPath: "id" });
-        objectStore.createIndex("name", "name", { unique: false });
-      };
-      request.onsuccess = function (event) {
-        var db = event.target.result;
-        var transaction = db.transaction(["users"], "readwrite");
-        var objectStore = transaction.objectStore("users");
-        var request = objectStore.add({ id: 1, name: "John Doe" });
-        request.onsuccess = function (event) {
-          console.log("Data added successfully");
-        };
-      };
-      request.onerror = function (event) {
-        console.log("Error creating database");
-      };
-    </script>
+    <script src="./js/db.js"></script>
   </body>
 </html>
